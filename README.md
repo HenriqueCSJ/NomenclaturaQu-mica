@@ -1,4 +1,4 @@
-# 🧪 Nomenclatura de Compostos Inorgânicos — Versão Ultra Expandida
+# 🧪 Nomenclatura de Compostos Inorgânicos
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-online-brightgreen)](https://henriquecsj.github.io/NomenclaturaQuimica/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
