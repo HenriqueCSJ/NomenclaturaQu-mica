@@ -37,54 +37,9 @@
             margin: 0 auto;
         }
 
-        /* Header de Créditos da UFRRJ - Agora em formato de cartão */
-        .ufrrj-header {
-            text-align: center;
-            margin-bottom: 25px;
-            padding: 25px 30px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
+        /* Header de Créditos da UFRRJ - Removido */
+        /* .ufrrj-header { ... } */
 
-        body.dark-mode .ufrrj-header {
-            background: #2c3e50;
-        }
-
-        .ufrrj-header img {
-            max-height: 100px;
-            /* Aumentado de 70px para 100px */
-            width: auto;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .ufrrj-header .credits strong,
-        .ufrrj-header .credits span {
-            color: #495057;
-            text-shadow: none;
-        }
-
-        body.dark-mode .ufrrj-header .credits strong,
-        body.dark-mode .ufrrj-header .credits span {
-            color: #ecf0f1;
-        }
-
-        .ufrrj-header .credits strong {
-            font-size: clamp(1.2rem, 3vw, 1.5rem);
-            /* Aumentado */
-            font-weight: 600;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .ufrrj-header .credits span {
-            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-            /* Aumentado */
-            line-height: 1.6;
-            /* Aumentado */
-            display: block;
-        }
 
         /* Header da Aplicação - Agora translúcido */
         .app-header {
@@ -95,7 +50,8 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            /* Alterado de space-between para center */
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
@@ -111,7 +67,7 @@
             font-size: clamp(1.6rem, 3.5vw, 2.2rem);
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
             margin: 0;
-            flex-grow: 1;
+            /* flex-grow: 1; removido para permitir a centralização */
         }
 
         /* Controles do Header (Botões) */
@@ -1152,20 +1108,43 @@
                 opacity: 1;
             }
         }
+
+        /* Estilos do novo rodapé */
+        .site-footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.85);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .site-footer img {
+            max-height: 80px;
+            width: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px;
+        }
+
+        .site-footer .credits strong {
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .site-footer .credits span {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            display: block;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <header class="ufrrj-header">
-            <img src="UFRRJ.png"
-                alt="Logo UFRRJ">
-            <div class="credits">
-                <strong>Universidade Federal Rural do Rio de Janeiro</strong>
-                <span>Instituto de Química, Departamento de Química Fundamental</span>
-                <span>Prof. Henrique C. S. Junior</span>
-            </div>
-        </header>
 
         <div class="app-header">
             <h1>🧪 Nomenclatura de Compostos Inorgânicos</h1>
@@ -3036,6 +3015,17 @@
         </div>
     </div>
     <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</div>
+
+    <footer class="site-footer">
+        <img src="UFRRJ.png"
+            alt="Logo UFRRJ">
+        <div class="credits">
+            <strong>Universidade Federal Rural do Rio de Janeiro</strong>
+            <span>Instituto de Química, Departamento de Química Fundamental</span>
+            <span>Prof. Henrique C. S. Junior</span>
+        </div>
+    </footer>
+
     <script>
         // Banco de dados expandido de compostos com tags para análise
         const compounds = [
