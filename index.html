@@ -15,6 +15,7 @@
 
         html {
             scroll-behavior: smooth;
+            /* height: 100%; REMOVIDO */
         }
 
         body {
@@ -24,6 +25,9 @@
             padding: 20px;
             color: #333;
             transition: all 0.3s ease;
+            /* display: flex; REMOVIDO */
+            /* flex-direction: column; REMOVIDO */
+            /* overflow: hidden; REMOVIDO */
         }
 
         /* Modo escuro */
@@ -35,13 +39,14 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
+            width: 100%;
+            /* display: flex; REMOVIDO */
+            /* flex-direction: column; REMOVIDO */
+            /* flex-grow: 1; REMOVIDO */
+            /* min-height: 0; REMOVIDO */
         }
 
-        /* Header de Créditos da UFRRJ - Removido */
-        /* .ufrrj-header { ... } */
-
-
-        /* Header da Aplicação - Agora translúcido */
+        /* Header da Aplicação */
         .app-header {
             padding: 20px;
             background: rgba(255, 255, 255, 0.1);
@@ -51,7 +56,6 @@
             margin-bottom: 30px;
             display: flex;
             justify-content: center;
-            /* Alterado de space-between para center */
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
@@ -59,7 +63,6 @@
 
         body.dark-mode .app-header {
             background: rgba(44, 62, 80, 0.3);
-            /* Ajuste para modo escuro */
         }
 
         .app-header h1 {
@@ -67,7 +70,7 @@
             font-size: clamp(1.6rem, 3.5vw, 2.2rem);
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
             margin: 0;
-            /* flex-grow: 1; removido para permitir a centralização */
+            text-align: center;
         }
 
         /* Controles do Header (Botões) */
@@ -165,10 +168,10 @@
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-            min-height: 500px;
-            max-height: 80vh;
+            /* flex-grow: 1; REMOVIDO */
             overflow-y: auto;
             transition: all 0.3s ease;
+            /* min-height: 0; REMOVIDO */
         }
 
         body.dark-mode .content-area {
@@ -1119,24 +1122,24 @@
         }
 
         .site-footer img {
-            max-height: 80px;
+            max-height: 110px;
             width: auto;
             border-radius: 50%;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             background: rgba(255, 255, 255, 0.1);
             padding: 5px;
         }
 
         .site-footer .credits strong {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             font-weight: 600;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: white;
         }
 
         .site-footer .credits span {
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 1.6;
             display: block;
         }
@@ -3017,8 +3020,7 @@
     <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</div>
 
     <footer class="site-footer">
-        <img src="UFRRJ.png"
-            alt="Logo UFRRJ">
+        <img src="UFRRJ.png" alt="Logo UFRRJ">
         <div class="credits">
             <strong>Universidade Federal Rural do Rio de Janeiro</strong>
             <span>Instituto de Química, Departamento de Química Fundamental</span>
@@ -3369,7 +3371,6 @@
             quizMode = document.querySelector('input[name="quizMode"]:checked').value;
 
             if (selectedCategories.length === 0) {
-                // Usar uma caixa de diálogo personalizada em vez de alert
                 showCustomAlert('Por favor, selecione pelo menos uma categoria.');
                 return;
             }
