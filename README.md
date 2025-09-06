@@ -190,4 +190,3 @@ Desenvolvimento e conteúdo:
 
 **Universidade Federal Rural do Rio de Janeiro**  
 **Instituto de Química, Departamento de Química Fundamental**  
-**Prof. Henrique C. S. Junior**
